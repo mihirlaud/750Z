@@ -15,8 +15,7 @@
  * SBHS Robotics Team 750Z
  * School Year: 2017-2018
  * Game: In The Zone
- * Author: Mihir Laud (so far)
- * Lurker: Allison Li
+ * Authors: Mihir Laud and Allison Li
  */
 void operatorControl() {
 
