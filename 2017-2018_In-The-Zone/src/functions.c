@@ -28,6 +28,28 @@ void lift(bool extend) {
   motorStop(L_MOTOR_2);
 }
 
+void swing(bool forward) {
+  if(forward == true){
+    motorSet(C_MOTOR_1, 127);
+    motorSet(C_MOTOR_2, -127);
+  } else if(forward == false) {
+    motorSet(C_MOTOR_1, -127);
+    motorSet(C_MOTOR_2, 127);
+  }
+  delay(20);
+  motorStop(C_MOTOR_1);
+  motorStop(C_MOTOR_2);
+}
+
+void claw(bool close) {
+  if(close == true)
+    motorSet(CLAW_MOTOR, 127);
+  else if(close == false)
+    motorSet(CLAW_MOTOR, -127);
+  delay(50);
+  motorStop(CLAW_MOTOR);
+}
+
 void memes() {
   speakerPlayRtttl("memes: d=4, o=5, b=160: c, 8p, 8g#, 16g, 16g#, 16g, 16g#, 8g, 8g#, d#, c, 8p, 8c, 8d#, 8g, g#, d#, g#, a#, 8g, 8g#, 8g, 8g#, 8g, 8p, c, c, 8p, 8g#, 16g, 16g#, 16g, 16g#, 8g, 8g#, d#, c, 8p, 8c, 8d#, 8g, g#, d#, g#, a#, 8g, 8g#, 8g, 8g#, 8g");
 }
